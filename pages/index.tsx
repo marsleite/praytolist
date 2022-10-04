@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components'
+import List from '../components/List/List'
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,8 @@ const Home: NextPage = () => {
           Welcome to <a href="https://nextjs.org">Pray App</a>
         </h1>
 
+        <List />
+
       </main>
 
     </Container>
@@ -27,9 +30,16 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  background: #e9e5e5;
   height: 100vh;
   width: 100vw;
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+  }
 `
 
 export default Home
